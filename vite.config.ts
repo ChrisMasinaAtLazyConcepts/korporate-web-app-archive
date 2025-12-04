@@ -32,5 +32,8 @@ export default defineConfig({
       transformMixedEsModules: true, // Force CJS/ESM transformation
       include: [/node_modules/] // Apply to all node_modules
     }
+  },
+   server: {
+    port: 80,
   }
 })
