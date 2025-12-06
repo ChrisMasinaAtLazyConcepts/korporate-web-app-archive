@@ -39,7 +39,8 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: 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
+          password: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Set DOCKER_IMAGE
         run: |
           echo "DOCKER_IMAGE=ghcr.io/$(echo ${{ github.actor }} | tr '[:upper:]' '[:lower:]')/store/korporate-fe" >> $GITHUB_ENV
